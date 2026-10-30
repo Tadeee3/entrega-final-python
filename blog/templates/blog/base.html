@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Mi Blog{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="{% url 'post_list' %}">Mi Blog</a>
+      <nav>
+        <a href="{% url 'post_list' %}">Inicio</a>
+        {% if user.is_authenticated %}
+          <a class="button small" href="{% url 'post_create' %}">+ Crear post</a>
+          <span class="welcome">Hola, {{ user.username }}</span>
+          <form class="inline" method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="link-button" type="submit">Salir</button></form>
+        {% else %}
+          <a href="{% url 'login' %}">Ingresar</a>
+          <a class="button small" href="{% url 'register' %}">Crear cuenta</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    {% if messages %}{% for message in messages %}<div class="message {{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer>Proyecto final Django · {{ now|date:"Y" }}</footer>
+</body>
+</html>
