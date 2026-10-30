@@ -1,8 +1,8 @@
-# Mi Blog Django
+# Entrega final: Consolidación del Blog Web en GitHub
 
-Aplicación web de blog desarrollada como proyecto final del curso de Python. Permite que las personas se registren, inicien sesión y creen publicaciones con imágenes.
+Aplicacion web de blog desarrollada como entrega final. Permite que las personas se registren, inicien sesion y creen publicaciones con imagenes.
 
-## Tecnologías
+## Tecnologias
 
 - Python 3
 - Django
@@ -13,23 +13,23 @@ Aplicación web de blog desarrollada como proyecto final del curso de Python. Pe
 ## Funcionalidades
 
 - Listado y detalle de publicaciones.
-- Creación, edición y eliminación de posts desde la interfaz web.
-- Carga opcional de imágenes para los posts.
-- Búsqueda por título o contenido.
-- Registro, inicio y cierre de sesión.
-- Protección de las rutas para crear, editar y eliminar publicaciones.
+- Creacion, edicion y eliminacion de posts desde la interfaz web.
+- Carga opcional de imagenes para los posts.
+- Busqueda por titulo o contenido.
+- Registro, inicio y cierre de sesion.
+- Proteccion de las rutas para crear, editar y eliminar publicaciones.
 - Solo el autor de un post puede modificarlo o eliminarlo.
 
-## Instalación y ejecución
+## Instalacion y ejecucion
 
-1. Cloná el repositorio y entrá en su carpeta:
+1. Clonar el repositorio y entrar en su carpeta:
 
    ```bash
    git clone URL_DEL_REPOSITORIO
-   cd blog_django
+   cd entrega-final-python
    ```
 
-2. Creá y activá un entorno virtual:
+2. Crear y activar un entorno virtual:
 
    ```bash
    python -m venv venv
@@ -39,38 +39,38 @@ Aplicación web de blog desarrollada como proyecto final del curso de Python. Pe
    source venv/bin/activate
    ```
 
-3. Instalá las dependencias:
+3. Instalar las dependencias:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Aplicá las migraciones:
+4. Aplicar las migraciones:
 
    ```bash
    python manage.py migrate
    ```
 
-5. Iniciá el servidor:
+5. Iniciar el servidor:
 
    ```bash
    python manage.py runserver
    ```
 
-6. Abrí `http://127.0.0.1:8000/` en el navegador.
+6. Abrir `http://127.0.0.1:8000/` en el navegador.
 
-La base de datos y las imágenes de usuarios no se incluyen en el repositorio. Luego de ejecutar las migraciones, podés crear una cuenta desde `/registro/` y cargar tus propios posts.
+La base de datos e imagenes de usuarios no se incluyen en el repositorio. Luego de ejecutar las migraciones, podes crear una cuenta desde `/registro/` y cargar tus propios posts.
 
-## Panel de administración
+## Panel de administracion
 
-Para usar el panel de Django, creá un superusuario:
+Para usar el panel de Django, crear un superusuario:
 
 ```bash
 python manage.py createsuperuser
 ```
 
-Después ingresá en `http://127.0.0.1:8000/admin/`.
+Despues ingresar en `http://127.0.0.1:8000/admin/`.
 
 ## Autor
 
-Tu Nombre — Proyecto final de Python y Django.
+Tadeo Collado — entrega final de Python y Django.
