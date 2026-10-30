@@ -25,7 +25,7 @@ Aplicacion web de blog desarrollada como entrega final. Permite que las personas
 1. Clonar el repositorio y entrar en su carpeta:
 
    ```bash
-   git clone URL_DEL_REPOSITORIO
+   git clone https://github.com/Tadeee3/entrega-final-python.git
    cd entrega-final-python
    ```
 
